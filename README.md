@@ -57,7 +57,7 @@ After saving the file, the tests should run again on the same terminal sessions 
 
 **Oh, nice!** The first test passes, so we're probably on the right track :smile:
 
-> It's not unusual that the code may be wrong even with tests passing. When using TDD, it's crucial that the test cases are thorough!
+> The code in its current state doesn't achieve its goal or make much sense and that's fine! We will solve it step by step and we'll get there.
 
 ## `size`
 
