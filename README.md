@@ -90,8 +90,7 @@ function createQueue() {
       return this.elements.length
     },
     add(e) {
-      this.elements.push(e)
-      return this.size()
+      return this.elements.push(e)
     },
   }
 }
@@ -115,11 +114,10 @@ function createQueue() {
       return this.elements.length
     },
     add(e) {
-      this.elements.push(e)
-      return this.size()
+      return this.elements.push(e)
     },
-    peek(e) {
-      return this.elements.length === 0 ? undefined : this.elements[0]
+    peek() {
+      return this.elements[0]
     },
   }
 }
@@ -145,14 +143,13 @@ function createQueue() {
       return this.elements.length
     },
     add(e) {
-      this.elements.push(e)
-      return this.size()
+      return this.elements.push(e)
     },
-    peek(e) {
-      return this.elements.length === 0 ? undefined : this.elements[0]
+    peek() {
+      return this.elements[0]
     },
     dequeue() {
-      if (this.elements.length === 0) {
+      if (this.size() === 0) {
         throw new Error()
       }
       return this.elements.shift()
