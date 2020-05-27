@@ -22,7 +22,6 @@ describe('Queue Size', () => {
   })
 })
 
-
 describe('Adding elements', () => {
   test('should have an `add` function to enqueue an element', () => {
     const queue = QueueFactory.createQueue()
@@ -62,7 +61,6 @@ describe('Peeking elements', () => {
     expect(queue.size()).toEqual(2)
   })
 })
-
 
 describe('Dequeue elements', () => {
   test('should have a `dequeue` function to get the item at the front of the queue', () => {

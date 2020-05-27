@@ -1,13 +1,13 @@
-# TDD with Javascript 
+# TDD with Javascript
 
 So, let's get familiar with the ancient art of **Test Driven Development**(TDD) using plain-old Javascript. We'll create a simple **queue** and follow you through the cycle of development for this problem!
 
 ## Requirements
- - Node.js > 6.x 
- - Yarn or NPM
- - IDE _(we'll use VSCode)_
- - A terminal
 
+- Node.js > 6.x
+- Yarn or NPM
+- IDE _(we'll use VSCode)_
+- A terminal
 
 ## Initial instructions
 
@@ -27,6 +27,7 @@ We've taken care of writing the test cases (`queue.test.js`). Running `yarn test
 > In computer science, a **queue** is a collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end of the sequence. By convention, the end of the sequence at which elements are added is called the back, tail, or rear of the queue, and the end at which elements are removed is called the head or front of the queue, analogously to the words used when people line up to wait for goods or services.
 
 We'll create a Javascript implementation of a queue that will have the following methods:
+
 - `size()` to return the number of elements queued.
 - `add(e)` to add an element to the end of the queue.
 - `peek()` to look at the front of the queue _(without modifying it)._
@@ -46,9 +47,7 @@ Usually, we try to address failed tests in a top-down strategy, since the first 
 
 ```javascript
 function createQueue() {
-    return {
-
-    }
+  return {}
 }
 ```
 
@@ -62,16 +61,16 @@ After saving the file, the tests should run again on the same terminal sessions 
 
 ## `size`
 
-For the next cases, we should **add the size function**. We should also introduce the underlying array that will hold our queue's  data. So, let's do all of that, **adding to our existing code:**
+For the next cases, we should **add the size function**. We should also introduce the underlying array that will hold our queue's data. So, let's do all of that, **adding to our existing code:**
 
 ```javascript
 function createQueue() {
-    return {
-       elements: [],
-       size() {
-           return this.elements.length
-       },
-    }
+  return {
+    elements: [],
+    size() {
+      return this.elements.length
+    },
+  }
 }
 ```
 
@@ -85,16 +84,16 @@ Now, let's implement the `add` function. It should receive an element as an argu
 
 ```javascript
 function createQueue() {
-    return {
-       elements: [],
-       size() {
-           return this.elements.length
-       },
-       add(e) {
-            this.elements.push(e)
-            return this.size()
-        },
-    }
+  return {
+    elements: [],
+    size() {
+      return this.elements.length
+    },
+    add(e) {
+      this.elements.push(e)
+      return this.size()
+    },
+  }
 }
 ```
 
@@ -106,23 +105,23 @@ Let's continue with our good work!
 
 ### `peek`
 
-The `peek` function is simple: it should return the **item at the front of the queue**. 
+The `peek` function is simple: it should return the **item at the front of the queue**.
 
 ```javascript
 function createQueue() {
-    return {
-       elements: [],
-       size() {
-           return this.elements.length
-       },
-       add(e) {
-            this.elements.push(e)
-            return this.size()
-        },
-       peek(e) {
-           return this.elements.length === 0 ? undefined : this.elements[0]
-       },
-    }
+  return {
+    elements: [],
+    size() {
+      return this.elements.length
+    },
+    add(e) {
+      this.elements.push(e)
+      return this.size()
+    },
+    peek(e) {
+      return this.elements.length === 0 ? undefined : this.elements[0]
+    },
+  }
 }
 ```
 
@@ -132,37 +131,37 @@ Now, checking our terminal:
 
 **We're almost done!** Let's move on to the next function.
 
-### `dequeue` 
+### `dequeue`
 
 The `dequeue` method is where the queue "is consumed". It should **return the element at the front of the queue** and, then, **removing it**. As we can see on the test's description, it should also **thrown an error if the queue is empty**.
 
-At last: 
+At last:
+
 ```javascript
 function createQueue() {
-    return {
-        elements: [],
-        size() {
-            return this.elements.length
-        },
-        add(e) {
-            this.elements.push(e)
-            return this.size()
-        },
-        peek(e) {
-            return this.elements.length === 0 ? undefined : this.elements[0]
-        },
-        dequeue() {
-            if (this.elements.length === 0){
-                throw new Error()
-            }
-            return this.elements.shift()
-        }
-    }
+  return {
+    elements: [],
+    size() {
+      return this.elements.length
+    },
+    add(e) {
+      this.elements.push(e)
+      return this.size()
+    },
+    peek(e) {
+      return this.elements.length === 0 ? undefined : this.elements[0]
+    },
+    dequeue() {
+      if (this.elements.length === 0) {
+        throw new Error()
+      }
+      return this.elements.shift()
+    },
+  }
 }
 
-
 module.exports = { createQueue }
-````
+```
 
 Now, **all of the tests should pass:**
 
