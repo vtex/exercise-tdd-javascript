@@ -1,6 +1,6 @@
 # TDD with Javascript
 
-So, let's get familiar with the ancient art of **Test Driven Development**(TDD) using plain-old Javascript. We'll create a simple **queue** and follow you through the cycle of development for this problem!
+So, let's get familiar with the art of **Test Driven Development**(TDD) using plain-old JavaScript. We'll create a module that implements a simple **queue** and we'll follow you through the cycle of development for this problem!
 
 ## Requirements
 
