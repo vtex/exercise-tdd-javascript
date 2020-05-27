@@ -37,7 +37,7 @@ We'll create a JavaScript implementation of a queue that will have the following
 
 Open `queue.js`, this is where we'll code.
 
-When first running `yarn test`, you'll see that **all tests fail**. This is ok, since we have not implemented anything yet:
+When first running `yarn test`, you'll see that **all tests fails**. This is OK, since we have not implemented anything yet:
 
 <img width="1002" alt="Screen Shot 2020-05-25 at 1 25 49 PM" src="https://user-images.githubusercontent.com/18706156/82835307-fbce2f00-9e99-11ea-9940-4801f21a75e4.png">
 
