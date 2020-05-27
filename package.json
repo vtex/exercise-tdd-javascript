@@ -1,0 +1,11 @@
+{
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
