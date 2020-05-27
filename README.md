@@ -43,7 +43,7 @@ When first running `yarn test`, you'll see that **all tests fail**. This is ok, 
 
 ### Creating the queue
 
-Usually, we try to address failed tests in a top-down strategy, since the first are usually the simpler ones. For the first test to succeed, we only need to **return something truthy on our `createQueue` function**. Let's do that:
+Usually, we try to address failed tests in a top-down strategy, since the first are usually the simpler ones. For the first test to succeed, we only need to **return something truthy on our `createQueue` function**. Let's do this:
 
 ```javascript
 function createQueue() {
